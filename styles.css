@@ -70,7 +70,7 @@ nav ul li a:hover {
 .texto-overlay {
     position: absolute;
     top: 50%; /* Alinha o texto verticalmente */
-    left: 5%; /* Define a distância da margem esquerda da tela */
+    left: 10%; /* Aumentei a distância da margem esquerda para 10% */
     transform: translateY(-50%); /* Ajusta para que o texto fique centralizado verticalmente */
     text-align: left; /* Alinha o texto à esquerda */
     color: white; /* Cor do texto */
