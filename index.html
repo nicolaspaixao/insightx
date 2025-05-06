@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insight X - Consultoria de Dados</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/png" href="simbolo.png">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="logo.png" alt="Logo">
+        </div>
+        <nav>
+            <ul id="menu">
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#servicos">Serviços</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+            <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+        </nav>
+    </header>
+
+
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h3>
+                    Transforme <span class="amarelo">dados</span> em decisões e <span class="amarelo">tarefas</span> em automações.
+                </h3>
+            </div>
+            <div class="hero-logo">
+                <img src="simbolo.png" alt="Logo da empresa">
+            </div>
+        </div>
+    </section>
+
+    <section id="sobre" class="bloco bloco-azul">
+        <div class="container">
+            <div class="texto">
+                <h2>Quem somos nós</h2>
+                <br>
+                <p>Com foco na prestação de serviços na área de dados, a Insight X tem como objetivo automatizar tarefas e fornecer insights estratégicos para empresas. Utilizamos técnicas avançadas de automação, Inteligência Artificial (Machine Learning) e Business Intelligence (BI) para transformar dados em decisões inteligentes.</p>
+                <p>Diversos estudos indicam que os dados são o novo petróleo: sua correta manipulação e transformação podem proporcionar maior controle, otimização de processos e crescimento operacional. Ao combinar automação e análise de dados, a Insight X ajuda sua empresa a extrair o máximo valor das informações, impulsionando a eficiência e a tomada de decisões.</p>
+                <!--
+                <ul>
+                    <li>Criação de robôs para automatização de tarefas;</li>
+                    <li>Dashboards interativos e dinâmicos para análises de dados;</li>
+                    <li>Planilhas para controles financeiros e processos internos;</li>
+                    <li>Consultoria e treinamento na área de dados;</li>
+                    <li>Criação e gestão de rotinas em banco de dados;</li>
+                    <li>Higienização de dados;</li>
+                </ul>
+            -->
+            </div>
+            <img src="data-science.jpg" alt="Data Science" class="imagem">
+        </div>
+    </section>
+
+
+
+    <section id="servicos" class="bloco bloco-cinza">
+        <div class="container">
+            <div class="texto">
+                <h2>Serviços prestados</h2>
+                <br><br>
+                <!-- Bloco de 3 imagens centralizadas abaixo de "Serviços prestados pela empresa" -->
+                <div class="image-row">
+                    <div class="image-item">
+                        <img src="Icon robot.png" alt="Imagem 1">
+                        <h4>Automatizações</h4>
+                    </div>
+                    <div class="image-item">
+                        <img src="Insight.png" alt="Imagem 2">
+                        <h4>Insights</h4>
+                    </div>
+                    <div class="image-item">
+                        <img src="Grafico.png" alt="Imagem 3">
+                        <h4>Acompanhamento</h4>
+                    </div>
+                </div>
+                <br><br>
+    
+                <!-- Lista de serviços -->
+                <ul>
+                    <li>● Criação de robôs para automatização de tarefas</li><br>
+                    <li>● Coleta e tratamento de dados</li><br>
+                    <li>● Automações via web scraping e requisições em APIs</li><br>
+                    <li>● Criação e implementação de dashboards de Power BI</li><br>
+                    <li>● Implementação de banco de dados</li><br>
+                    <li>● Consultoria de planilhas financeiras</li><br>
+                    <li>● Treinamento de Excel e aulas vip’s</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    
+    
+
+    <section id="contato" class="bloco bloco-escuro">
+        <div class="container">
+            <h2>Contato</h2>
+            <p>Informações para entrar em contato.</p>
+        </div>
+    </section>
+
+    <script>
+        function toggleMenu() {
+            var menu = document.getElementById("menu");
+            menu.classList.toggle("show");
+        }
+    </script>
+</body>
+</html>
+

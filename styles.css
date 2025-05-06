@@ -1,0 +1,323 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #ffffff;
+    color: #020a3c;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 15px 5%;
+    height: 80px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.logo img {
+    height: 50px;
+}
+
+nav {
+    display: flex;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #020a3c;
+    font-size: 18px;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
+}
+
+nav ul li a:hover {
+    color: #ffaa00;
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    nav ul {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        width: 100%;
+        background-color: #ffffff;
+        padding: 20px 0;
+        text-align: center;
+    }
+
+    nav ul.show {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+}
+
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 80px 10%;
+    min-height: 90vh;
+    background-image: url('Imagem.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+    text-align: left;
+}
+
+.hero-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+    gap: 60px;
+    flex-wrap: wrap;
+}
+
+.hero-text {
+    flex: 1;
+    max-width: 600px;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: white;
+}
+
+.hero-logo img {
+    height: auto;
+    max-height: 80vh;
+    width: auto;
+    max-width: 300px;
+    object-fit: contain;
+}
+
+.amarelo {
+    color: #ffaa00;
+}
+
+.bloco {
+    padding: 60px 10%;
+}
+
+.bloco-azul {
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+.bloco-cinza {
+    background-color: #0a1f44;
+    color: white;
+}
+
+.bloco-escuro {
+    background-color: #222;
+    color: white;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 40px;
+}
+
+.texto {
+    flex: 1;
+    font-size: 1.2em;
+    line-height: 1.5;
+    text-align: left;
+    padding-right: 20px;
+}
+
+.imagem {
+    width: 40%;
+    max-height: 300px;
+    object-fit: cover;
+    padding-left: 20px;
+}
+
+#servicos .texto {
+    flex: 1;
+    font-size: 1.2em;
+    line-height: 1.5;
+    text-align: left;
+    padding-right: 20px;
+}
+
+#servicos .texto ul {
+    margin-top: 20px;
+    padding-left: 20px;
+    list-style-type: disc;
+}
+
+#servicos .texto ul li {
+    margin-bottom: 10px;
+}
+
+@media (max-width: 1024px) {
+    .container {
+        flex-direction: column;
+        text-align: center;
+        gap: 30px;
+    }
+
+    .imagem {
+        width: 100%;
+        margin-top: 20px;
+        padding-left: 0;
+    }
+
+    .hero-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 30px;
+    }
+
+    .hero-logo img {
+        max-height: 50vh;
+        max-width: 80vw;
+    }
+
+    .hero-text {
+        text-align: center;
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-content {
+        padding-top: 40px;
+    }
+
+    .hero-logo img {
+        max-height: 40vh;
+        max-width: 70vw;
+    }
+
+    .hero-text {
+        font-size: 1.8rem;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Bloco de 3 imagens abaixo de "Serviços prestados pela empresa" */
+#servicos .image-row {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 20px;
+    flex-wrap: wrap; /* Permite que as imagens quebrem para a linha seguinte em telas menores */
+}
+
+#servicos .image-item {
+    text-align: center;
+    flex: 1;
+    min-width: 150px; /* Diminui a largura mínima para as imagens */
+    max-width: 200px; /* Diminui a largura máxima para as imagens */
+}
+
+#servicos .image-item img {
+    width: 100%;
+    height: auto;
+    max-width: 150px; /* Diminuindo o tamanho máximo das imagens */
+    margin-bottom: 10px;
+}
+
+#servicos .image-item h4 {
+    font-size: 1.2em;
+    color: #e2e2e2;
+    margin-top: 10px;
+}
+
+/* Centralizando a lista de serviços e removendo os marcadores */
+#servicos ul {
+    list-style-type: none; /* Remove os pontos de lista */
+    padding: 0;
+    margin: 0;
+    text-align: center; /* Centraliza o conteúdo da lista */
+}
+
+#servicos ul li {
+    font-size: 1.2em;
+    line-height: 1.5;
+    color: #ffffff; /* Cor do texto (ajuste conforme necessário) */
+    margin-bottom: 10px; /* Espaço entre os itens */
+    display: inline-block; /* Garante que os itens fiquem na linha */
+    padding: 0; /* Remove qualquer indentação adicional */
+}
+
+
+#servicos h2 {
+    color: #ffaa00; /* Aplica a cor amarela ao título */
+    text-align: center; /* Centraliza o título */
+}
+
+
+
+
+
+/* Responsividade para telas menores */
+@media (max-width: 1024px) {
+    #servicos .image-row {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #servicos .image-item {
+        width: 80%;  /* As imagens ocuparão 80% da largura da tela em telas menores */
+        margin-bottom: 20px;
+    }
+
+    #servicos .image-item img {
+        max-width: 100%; /* Ajuste de largura das imagens */
+    }
+}
+
+@media (max-width: 768px) {
+    #servicos .image-item h4 {
+        font-size: 1em; /* Ajuste do tamanho da fonte */
+    }
+}
