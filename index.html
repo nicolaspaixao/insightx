@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Insight X - Consultoria de Dados</title>
+    <link rel="stylesheet" href="styles.css"/>
+    <link rel="icon" type="image/png" href="simbolo.png"/>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="logo.png" alt="Logo"/>
+        </div>
+        <nav>
+            <ul id="menu">
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#servicos">Serviços</a></li>
+                <li><a href="#treinamentos">Treinamentos</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+            <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h3>Transforme <span class="amarelo">dados</span> em decisões e <span class="amarelo">tarefas</span> em automações.</h3>
+            </div>
+            <div class="hero-logo">
+                <img src="simbolo.png" alt="Logo da empresa"/>
+            </div>
+        </div>
+    </section>
+
+    <section id="sobre" class="bloco bloco-azul">
+        <div class="container">
+            <div class="texto">
+                <h2>Quem somos nós</h2>
+                <br>
+                <p>Com foco na prestação de serviços na área de dados, a Insight X tem como objetivo automatizar tarefas e fornecer insights estratégicos para empresas.</p>
+                <p>Utilizamos técnicas de automação, IA (Machine Learning) e BI para transformar dados em decisões inteligentes.</p>
+            </div>
+            <img src="data-science.jpg" alt="Data Science" class="imagem"/>
+        </div>
+    </section>
+
+    <section id="servicos" class="bloco bloco-cinza">
+        <div class="container-coluna">
+            <h2>Nossos serviços</h2>
+            <div class="servicos-cards">
+                <div class="card-servico">
+                    <img src="Icon robot.png" alt="Robô">
+                    <h3>Automatizações</h3>
+                    <ul>
+                        <li>Robôs para tarefas repetitivas</li>
+                        <li>Processos automatizados</li>
+                        <li>Scripts de produtividade</li>
+                    </ul>
+                </div>
+                <div class="card-servico">
+                    <img src="Grafico.png" alt="Acompanhamento">
+                    <h3>Acompanhamento</h3>
+                    <ul>
+                        <li>Implementação de B.I.</li>
+                        <li>Dashboards e relatórios</li>
+                        <li>Monitoramento de indicadores</li>
+                    </ul>
+                </div>
+                <div class="card-servico">
+                    <img src="Insight.png" alt="Campanhas">
+                    <h3>Performance de tráfego</h3>
+                    <ul>
+                        <li>Tráfego pago com dados</li>
+                        <li>Relatórios de performance</li>
+                        <li>Dashboards com ROI</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="treinamentos" class="bloco bloco-azul">
+        <div class="container-coluna">
+            <h2>Nossos treinamentos</h2>
+            <div class="cursos-cards">
+                <div class="card-curso">
+                    <img src="DAX.png" alt="Curso DAX Avançado">
+                    <a href="#" class="btn-saiba-mais">Saiba mais</a>
+                </div>
+                <div class="card-curso">
+                    <img src="Excel.png" alt="Curso Excel Avançado">
+                    <a href="#" class="btn-saiba-mais">Saiba mais</a>
+                </div>
+                <div class="card-curso">
+                    <img src="Linguagem M.png" alt="Curso Linguagem M">
+                    <a href="#" class="btn-saiba-mais">Saiba mais</a>
+                </div>
+                <div class="card-curso">
+                    <img src="SQL.png" alt="Curso SQL">
+                    <a href="#" class="btn-saiba-mais">Saiba mais</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contato" class="bloco bloco-escuro">
+        <div class="container-contato">
+            <h2>Entre em contato</h2>
+            <p>Preencha o formulário abaixo e retornaremos o mais breve possível.</p>
+
+            <form class="form-contato">
+                <input type="text" name="nome" placeholder="Seu nome" required>
+                <input type="email" name="email" placeholder="Seu e-mail" required>
+                <textarea name="mensagem" placeholder="Sua mensagem" rows="5" required></textarea>
+                <button type="submit">Enviar mensagem</button>
+            </form>
+
+            <div class="redes-sociais">
+                <p>Siga a Insight X nas redes sociais:</p>
+                <div class="icones-redes">
+                    <a href="https://www.instagram.com/seuusuario" target="_blank"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/instagram.svg" alt="Instagram"></a>
+                    <a href="https://www.linkedin.com/in/seuusuario" target="_blank"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/linkedin.svg" alt="LinkedIn"></a>
+                    <a href="https://wa.me/55SEUNUMERO" target="_blank"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/whatsapp.svg" alt="WhatsApp"></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        function toggleMenu() {
+            var menu = document.getElementById("menu");
+            menu.classList.toggle("show");
+        }
+    </script>
+</body>
+</html>

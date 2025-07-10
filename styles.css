@@ -1,0 +1,390 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #ffffff;
+    color: #020a3c;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 15px 5%;
+    height: 80px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.logo img {
+    height: 50px;
+}
+
+nav {
+    display: flex;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #020a3c;
+    font-size: 18px;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
+}
+
+nav ul li a:hover {
+    color: #ffaa00;
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    nav ul {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        width: 100%;
+        background-color: #ffffff;
+        padding: 20px 0;
+        text-align: center;
+    }
+
+    nav ul.show {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .texto {
+        padding-right: 0;
+        padding-bottom: 20px;
+    }
+
+    .imagem {
+        width: 100%;
+        padding-left: 0;
+    }
+}
+
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 80px 10%;
+    min-height: 90vh;
+    background-image: url('Imagem.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+    text-align: left;
+}
+
+.hero-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+    gap: 60px;
+    flex-wrap: wrap;
+}
+
+.hero-text {
+    flex: 1;
+    max-width: 600px;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: white;
+}
+
+.hero-logo img {
+    height: auto;
+    max-height: 80vh;
+    width: auto;
+    max-width: 300px;
+    object-fit: contain;
+}
+
+.amarelo {
+    color: #ffaa00;
+}
+
+.bloco {
+    padding: 60px 10%;
+}
+
+.bloco-azul {
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+.bloco-cinza {
+    background-color: #0a1f44;
+    color: white;
+}
+
+.bloco-escuro {
+    background-color: #222;
+    color: white;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 40px;
+}
+
+.container-coluna {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.texto {
+    flex: 1;
+    font-size: 1.2em;
+    line-height: 1.5;
+    text-align: left;
+    padding-right: 20px;
+}
+
+.imagem {
+    width: 40%;
+    max-height: 300px;
+    object-fit: cover;
+    padding-left: 20px;
+}
+
+.bloco-cinza h2,
+.bloco-escuro h2,
+#servicos h2,
+#contato h2 {
+    font-size: 2em;
+    color: #ffaa00;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.servicos-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.card-servico {
+    background-color: #ffffff;
+    color: #0a1f44;
+    padding: 30px;
+    border-radius: 15px;
+    width: 300px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+    text-align: center;
+}
+
+.card-servico:hover {
+    transform: translateY(-5px);
+}
+
+.card-servico img {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 15px;
+}
+
+.card-servico h3 {
+    font-size: 1.3em;
+    margin-bottom: 15px;
+    min-height: 48px;
+}
+
+.card-servico ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    text-align: left;
+}
+
+.card-servico ul li {
+    font-size: 1em;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+/* Seção de treinamentos */
+#treinamentos h2 {
+    font-size: 2em;
+    color: #0a1f44;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.treinamento-texto {
+    font-size: 1.2em;
+    max-width: 900px;
+    margin: 0 auto;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Seção de contato */
+.container-contato {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#contato h2 {
+    font-size: 2em;
+    color: #ffaa00;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+#contato p {
+    margin-bottom: 30px;
+    color: #ccc;
+    font-size: 1.1em;
+}
+
+.form-contato {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form-contato input,
+.form-contato textarea {
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1em;
+}
+
+.form-contato input::placeholder,
+.form-contato textarea::placeholder {
+    color: #999;
+}
+
+.form-contato button {
+    background-color: #ffaa00;
+    color: #0a1f44;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.form-contato button:hover {
+    background-color: #e69500;
+}
+
+.redes-sociais {
+    margin-top: 40px;
+    color: #ccc;
+    text-align: center;
+}
+
+.redes-sociais p {
+    margin-bottom: 15px;
+    font-size: 1.1em;
+}
+
+.icones-redes {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.icones-redes a img {
+    width: 32px;
+    height: 32px;
+    filter: invert(100%);
+    transition: transform 0.3s ease;
+}
+
+.icones-redes a img:hover {
+    transform: scale(1.2);
+}
+
+
+
+.cursos-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.card-curso {
+    background-color: #ffffff;
+    border-radius: 15px;
+    padding: 15px;
+    width: 250px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.card-curso:hover {
+    transform: translateY(-5px);
+}
+
+.card-curso img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.btn-saiba-mais {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 15px;
+    background-color: #ffaa00;
+    color: #0a1f44;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-saiba-mais:hover {
+    background-color: #e69500;
+}
